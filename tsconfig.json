@@ -2,6 +2,8 @@
     "extends": "./tsconfig/tsconfig.all.json",
     "compilerOptions": {
         "module": "ESNext",
-        "target": "ESNext"
+        "target": "ESNext",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true
     }
 }

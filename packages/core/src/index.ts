@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import Clock, { Delayed } from '@gamestdio/timer';
 
 // Core classes

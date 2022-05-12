@@ -1,6 +1,6 @@
 {
   "name": "@colyseus/core",
-  "version": "0.14.30",
+  "version": "0.14.31",
   "description": "Multiplayer Framework for Node.js.",
   "input": "./src/index.ts",
   "main": "./build/index.js",
@@ -39,7 +39,9 @@
     "debug": "^4.0.1",
     "internal-ip": "^4.3.0",
     "nanoid": "^2.0.0",
-    "notepack.io": "^2.2.0"
+    "notepack.io": "^2.2.0",
+    "reflect-metadata": "^0.1.13",
+    "typedi": "^0.10.0"
   },
   "publishConfig": {
     "access": "public"

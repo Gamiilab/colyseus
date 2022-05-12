@@ -18,6 +18,7 @@ import * as controller from './matchmaker/controller';
 
 import { Client } from './Transport';
 import { Type } from './types';
+import {Container} from "typedi";
 
 export { MatchMakerDriver, controller };
 
@@ -259,7 +260,7 @@ async function handleCreateRoom(roomName: string, clientOptions: ClientOptions):
     throw new ServerError( ErrorCode.MATCHMAKE_NO_HANDLER, `provided room name "${roomName}" not defined`);
   }
 
-  const room = new registeredHandler.klass();
+  const room = Container.get(registeredHandler.klass);
 
   // set room public attributes
   room.roomId = generateId();
