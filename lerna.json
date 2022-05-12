@@ -1,8 +1,7 @@
 {
   "packages": [
     "packages/core",
-    "packages/testing",
-    "bundles/*"
+    "packages/testing"
   ],
   "version": "independent",
   "publish": {
