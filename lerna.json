@@ -1,6 +1,5 @@
 {
   "packages": [
-    "bundles/*",
     "packages/*",
     "packages/drivers/*",
     "packages/transport/*",

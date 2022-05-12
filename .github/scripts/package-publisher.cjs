@@ -1,7 +1,7 @@
 const { execSync } = require('child_process');
 const getPackages = require('get-monorepo-packages');
 const semver = require('semver');
-
+const npmLogin = require('npm-cli-login');
 
 function publishVersionChangedPackagesList(root_dir) {
     // Get package list in a directory.
@@ -24,12 +24,15 @@ function publishVersionChangedPackagesList(root_dir) {
             // Check whether the directory packge is greater than the published.
             if (semver.gt(packageInfo["package"]["version"], latestPublisedVersion)) {
                 // Set NPM tokens.
-                execSync(`npm config set //registry.npmjs.org/:_authToken ${process.env.NPM_TOKEN}`,
-                    { stdio: 'inherit' })
+              npmLogin(process.env.NPM_USER,
+                process.env.NPM_PASSWORD,
+                "admin@elpis.game",
+                process.env.NPM_REGISTRY,
+                "@colyseus");
                 console.log(`publishing package ${packageInfo["package"]["name"]}`)
 
                 // Execute NPM commands
-                execSync(`cd ${packageInfo["location"]} && npm publish`, { stdio: 'inherit' });
+                execSync(`cd ${packageInfo["location"]} && npm publish --registry ${process.env.NPM_REGISTRY}`, { stdio: 'inherit' });
             }
         } catch (error) {
             continue;

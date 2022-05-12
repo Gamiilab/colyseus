@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "@colyseus/arena",
   "version": "0.14.24",
   "description": "Colyseus Arena Tools",

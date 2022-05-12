@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "@colyseus/uwebsockets-transport",
   "version": "0.14.27",
   "input": "./src/index.ts",

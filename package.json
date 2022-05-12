@@ -78,5 +78,10 @@
       "lcov"
     ],
     "all": true
+  },
+  "dependencies": {
+    "get-monorepo-packages": "^1.2.0",
+    "npm-cli-login": "^1.0.0",
+    "semver": "^7.3.7"
   }
 }

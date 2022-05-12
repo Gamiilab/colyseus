@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "@colyseus/redis-driver",
   "version": "0.14.22",
   "input": "./src/index.ts",
