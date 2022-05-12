@@ -1,10 +1,6 @@
 {
   "packages": [
-    "packages/*",
-    "packages/drivers/*",
-    "packages/transport/*",
-    "packages/presence/*",
-    "packages/serializer/*"
+    "packages/core"
   ],
   "version": "independent",
   "publish": {
